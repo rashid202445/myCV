@@ -9,10 +9,8 @@ body {
 }
 
 .hero {
-    background-image: url('your-background-image.jpg'); /* يمكنك إضافة خلفية مخصصة */
-    background-size: cover;
-    background-position: center;
-    min-height: 400px;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    height: 100vh;
 }
 
 footer {
