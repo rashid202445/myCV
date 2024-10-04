@@ -17,3 +17,7 @@ footer {
     background-color: #343a40;
     color: white;
 }
+
+.btn {
+    margin-left: 10px;
+}
