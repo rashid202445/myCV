@@ -5,82 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>السيرة الذاتية | رشيد السياغي</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS (لتسهيل تصميم الواجهة) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #343a40;
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-        .section-title {
-            border-bottom: 2px solid #343a40;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="mb-5">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <h1>رشيد خالد صالح السياغي</h1>
+            <a class="navbar-brand" href="#">رشيد السياغي</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">نبذة عني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">المهارات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">مشاريعي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">اتصل بي</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">رشيد خالد صالح السياغي</h1>
             <p class="lead">مهندس تكنولوجيا المعلومات ومطور نظم</p>
         </div>
     </header>
 
-    <!-- About Me Section -->
-    <section class="container mb-5">
-        <h2 class="section-title">نبذة عني</h2>
-        <p>أنا مطور نظم وخبير في تكنولوجيا المعلومات من اليمن. لدي خبرة واسعة في تطوير تطبيقات الويب والهواتف الذكية. أعمل حاليًا كمطور نظم في إبداع سوفت للأنظمة الخاصة، وأسعى دائمًا لتطوير مهاراتي ومواكبة التكنولوجيا الحديثة.</p>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">نبذة عني</h2>
+            <p>أنا مطور نظم وخبير في تكنولوجيا المعلومات من اليمن. لدي خبرة واسعة في تطوير تطبيقات الويب والهواتف الذكية. أعمل حاليًا كمطور نظم في إبداع سوفت للأنظمة الخاصة، وأسعى دائمًا لتطوير مهاراتي ومواكبة التكنولوجيا الحديثة.</p>
+        </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="container mb-5">
-        <h2 class="section-title">المهارات</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <ul>
-                    <li>PHP، Laravel، Python، C#، SQLServer، Java</li>
-                    <li>تطوير التطبيقات: Android، Flutter، Firebase</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul>
-                    <li>قواعد البيانات: MySQL، Oracle</li>
-                    <li>إدارة الشبكات وبرمجة MikroTik</li>
-                </ul>
+    <section id="skills" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">المهارات</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>البرمجة</h3>
+                    <ul>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>Python</li>
+                        <li>C#</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>تطوير التطبيقات</h3>
+                    <ul>
+                        <li>Android</li>
+                        <li>Flutter</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>قواعد البيانات</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Oracle</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="container mb-5">
-        <h2 class="section-title">الاتصال بي</h2>
-        <p>يمكنك التواصل معي عبر البريد الإلكتروني: <a href="mailto:Rashid201143@gmail.com">Rashid201143@gmail.com</a></p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title">مشاريعي</h2>
+            <p>هنا يمكنك وضع روابط أو صور لمشاريعك السابقة.</p>
+        </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">اتصل بي</h2>
+            <p>يمكنك التواصل معي عبر البريد الإلكتروني: <a href="mailto:Rashid201143@gmail.com">Rashid201143@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 رشيد خالد صالح السياغي</p>
     </footer>
 
