@@ -56,7 +56,7 @@
             <h2 class="section-title" id="skills_title">المهارات</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <h4>لغات البرمجة</h4>
+                    <h4 id="aboutskills_text">لغات البرمجة</h4>
                     <ul>
                         <li>PHP</li>
                         <li>Laravel</li>
@@ -97,12 +97,13 @@
 
         // تحميل ملف اللغات
         async function loadLanguage(lang) {
-           // var fileNameLang='lang/'+ lang +'.json';
-           // const response = await fetch(fileNameLang); -->
-            const response = await fetch('/rashed.github.io/languages.json');
+            var fileNameLang='/rashed.github.io/lang/'+ lang +'.json';
+            const response = await fetch(fileNameLang); -->
+            //const response = await fetch('/rashed.github.io/languages.json');
             const data = await response.json();
 
-            const languageData = data[lang];
+            //const languageData = data[lang];
+            const languageData = data;
 
             // تحديث النصوص في الصفحة بناءً على اللغة المختارة
             document.title = languageData.title;
@@ -116,6 +117,7 @@
             document.getElementById('projects_title').textContent = languageData.projects_title;
             document.getElementById('contact_title').textContent = languageData.contact_title;
             document.getElementById('contact_email').textContent = languageData.contact_email;
+            document.getElementById('aboutskills_text').textContent = languageData.aboutskills_text;
             languageToggle.textContent = lang === "ar" ? languageData.button_english : languageData.button_arabic;
         }
 
